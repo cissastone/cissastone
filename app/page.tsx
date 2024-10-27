@@ -1,101 +1,75 @@
+import Link from "next/link";
+import Slider from "./_components/Slider";
+import Products from "./_components/Products";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      {/* <section className="flex flex-col items-center gap-2 justify-center mb-4">
+        <h1 className="sm:text-6xl text-4xl font-extrabold mt-2 text-black ">
+          Çissa Stone
+        </h1>
+        <p className="w-[350px] max-sm:text-xs sm:w-[500px] text-paragraph mt-2 text-sm max-sm:w-[250px]">
+          Yapay taşın değişimiyle ilgili derin bilgimiz ve deneyimimizle,
+          estetik ve fonksonelliği bir araya getiriyoruz.
+        </p>
+      </section>
+      <Slider />
+      <div className="w-full flex justify-center mt-2">
+        <Link
+          href={"#products"}
+          className="px-4 py-1 bg-black text-white rounded-full  hover:underline"
+        >
+          Tüm Ürünleri Gör
+        </Link>
+      </div> */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="flex mt-10 max-sm:flex-col max-sm:gap-4">
+        <div className="flex-1 flex gap-4 sm:justify-between flex-col relative z-10">
+          <div>
+
+          <span className="text-neutral-300 text-xs inline-block sm:top-4 sm:-right-[450px] relative">
+            3D Tasarım İşlemleri
+          </span>
+          <h1 className="sm:text-8xl text-7xl font-bold bg-gradient-to-b from-gradientTextStart sm:mb-8 max-sm:w-full   to-gradientTextEnd text-transparent bg-clip-text">
+            Çissa Stone
+          </h1>
+          <p className="text-neutral-300 leading-8 sm:text-lg  sm:max-w-[600px]">
+            Yapay taşın değişimiyle ilgili derin bilgimiz ve deneyimimizle,
+            estetik ve fonksonelliği bir araya getiriyoruz.
+          </p>
+          </div>
+          {/* Direction buttons */}
+          <div className="flex gap-4  max-lg:flex-col max-lg:w-fit">
+          <button className="bg-primary  text-neutral  px-4 py-2 text-xl rounded-full hover:bg-neutral-400 font-medium"><Link href={"#products"}>Tüm Ürünleri Gör</Link></button>
+          <button className="border border-primary  text-primary max-sm:px-2   px-4 py-2 text-xl rounded-full hover:bg-neutral-400 font-medium"><Link href={"/contact"}>Bizimle İletişime Geç</Link></button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="absolute w-[500px] h-[500px] max-sm:hidden bg-slate-50 left-0 rounded-full blur-[100px] opacity-10 z-0" />
+
+        <div className="w-full flex-1 grid grid-cols-1 sm:row-span-4   gap-4 sm:grid-cols-5 ">
+        <div className="absolute w-[500px] h-[500px]  bg-neutral-200 right-0 rounded-full blur-[100px] opacity-30" />
+
+          <div className=" h-[150px] max-sm:h-[200px] col-span-5 row-span-2 relative overflow-hidden  ">
+            <Image src="/im1.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out " />
+          </div>
+          <div className="sm:col-span-3 col-span-5 sm:row-span-1 max-sm:h-[200px]   relative">
+            <Image src="/im4.jpg" fill alt="image"  className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out"/>
+          </div>
+          <div className="sm:col-span-2 col-span-5 h-[200px]  row-span-1 relative">
+            <Image src="/im5.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+          </div>
+          <div className="sm:col-span-2 col-span-5 h-[100px] max-sm:h-[200px] relative">
+            <Image src="/im2.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+          </div>
+          <div className="sm:col-span-3 col-span-5 h-[100px] max-sm:h-[200px] relative">
+            <Image src="/im3.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+          </div>
+        </div>
+      </section>
+      <Products /> 
+
+    </main>
   );
 }

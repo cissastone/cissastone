@@ -1,27 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /*Header Color gradient */
+    --gradientTextStart:246,246,247,1;
+    --gradientTextEnd:126,128,143,1;
+    /* Background color 1000 */
+    --neutral1000:6,11,39,1;
+    --neutral800:14,19,48,1;
+    --neutral600:21,25,52,1;
+    --neutral500:40,45,69,1;
+    --neutral400:71,80,122,1;
+    --neutral300:143,155,183,1;
+    --neutral200:246,246,247,1;
+    --neutral:255,255,255,1;
+    --primary:106,148,255,1;
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
