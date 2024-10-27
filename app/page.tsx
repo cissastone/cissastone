@@ -2,6 +2,7 @@ import Link from "next/link";
 import Products from "./_components/Products";
 import Image from "next/image";
 
+export const revalidate = 0;
 export default function Home() {
   return (
     <main>
