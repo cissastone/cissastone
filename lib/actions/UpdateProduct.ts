@@ -1,5 +1,6 @@
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { initializeFirebaseClient } from "../FirebaseClient/config";
+import { revalidatePath } from "next/cache";
 
 
 interface ProductData {
@@ -19,6 +20,7 @@ export async function updateProductData(id: string, productData: any) {
     console.log("Ürün başarıyla güncellendi!");
 
     const updatedDoc = await getDoc(collectionRef);
+    revalidatePath("/adminDashboard")
     if (updatedDoc.exists()) {
       return updatedDoc.data() as ProductData;
     } else {
