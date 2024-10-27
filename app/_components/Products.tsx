@@ -1,7 +1,7 @@
 import { getAllProducts } from "@/lib/actions/getAllProducts";
 import SearchInput from "./SearchInput";
 
-export const revalidate = 60; // 60 saniyede bir veriyi yeniden getir
+export const revalidate = 10; // 60 saniyede bir veriyi yeniden getir
 
 const Products = async () => {
   const products = await getAllProducts();

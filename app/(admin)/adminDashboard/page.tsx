@@ -1,8 +1,8 @@
 import ProductButtons from "@/app/_components/ProductButtons";
 import { getAllProducts } from "@/lib/actions/getAllProducts"
 import Image from "next/image";
-export const revalidate = 60; // 60 saniyede bir veriyi yeniden getir
 
+export const revalidate = 0; // 60 saniyede bir veriyi yeniden getir
 const AdminDashboard =async () => {
     const products = await getAllProducts();
   return (
