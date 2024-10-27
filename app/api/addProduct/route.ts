@@ -2,6 +2,7 @@ import { initAdmin } from "@/lib/FirebaseAdmin/config";
 import { NextRequest, NextResponse } from "next/server";
 import admin from "firebase-admin";
 import { v4 as uuidv4 } from "uuid";
+import { revalidatePath } from "next/cache";
 export async function POST(request: NextRequest) {
   initAdmin();
   const adminDb = admin.firestore();
@@ -30,7 +31,6 @@ export async function POST(request: NextRequest) {
       `productImages/${imageUniqueId}/${productImage.name}`
     )}?alt=media`;
 
-    console.log("ImageUrl", productImageUrl);
 
     await adminDb.collection("products").add({
       productName,
@@ -39,6 +39,9 @@ export async function POST(request: NextRequest) {
       imageUrl: productImageUrl,
       createdAt: admin.firestore.Timestamp.now(),
     });
+
+    revalidatePath("/adminDashboard")
+    revalidatePath("/")
 
     return NextResponse.json({ message: "Ürün başarıyla yüklendi." });
   } catch (error: any) {
