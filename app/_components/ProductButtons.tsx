@@ -4,6 +4,8 @@ import { useState } from "react";
 import { updateProductData } from "@/lib/actions/UpdateProduct"; // Güncelleme fonksiyonu
 import { deleteProductData } from "@/lib/actions/deleteProduct";
 
+
+export const revalidate="0";
 const ProductButtons = ({productid}:{productid:string}) => {
     const [openForm, setOpenForm] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -21,7 +23,6 @@ const ProductButtons = ({productid}:{productid:string}) => {
             setMessage("Ürün Bulunamadı");
             return;
         }
-        console.log(data.imageUrl)
         setProductData(data)
         setOpenForm(true);
     };
@@ -41,10 +42,6 @@ const ProductButtons = ({productid}:{productid:string}) => {
     
         try {
             await updateProductData(productid, productData);
-            const data = await getProductData(productid);
-            setProductData(data!)
-
-    
             setMessage("Ürün Başarıyla Güncellendi"); // Başarılı güncelleme mesajı
             setOpenForm(false); // Formu kapat
         } catch (error) {
