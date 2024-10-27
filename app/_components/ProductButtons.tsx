@@ -34,21 +34,32 @@ const ProductButtons = ({productid}:{productid:string}) => {
         });
     };
 
-    // Formu submit et ve Firestore'da güncelle
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
-
+        e.preventDefault(); // Formun varsayılan gönderimini engelle
+    
+        setLoading(true); // Yükleniyor durumunu ayarla
+    
         try {
-            await updateProductData(productid, productData); // Firebase güncelleme işlemi
-            setMessage("Ürün Başarıyla Güncellendi");
-            setOpenForm(false);
-        } catch (_) {
-            setMessage("Güncelleme Başarısız");
+            // Firebase güncelleme işlemi
+            const updatedData = await updateProductData(productid, productData);
+            // Tip belirlemesi yaparak Firestore'dan dönen veriyi uygun bir yapıya çevir
+        const typedUpdatedData = updatedData as { 
+            productName: string; 
+            productDescription: string; 
+            productAmount: string; 
+        };
+            setProductData(typedUpdatedData); // Güncellenen ürünü state'e ata
+    
+            setMessage("Ürün Başarıyla Güncellendi"); // Başarılı güncelleme mesajı
+            setOpenForm(false); // Formu kapat
+        } catch (error) {
+            console.error(error); // Hata durumunda konsola hata yazdır
+            setMessage("Güncelleme Başarısız"); // Başarısız güncelleme mesajı
         } finally {
-            setLoading(false);
+            setLoading(false); // Yükleniyor durumunu kapat
         }
     };
+    
     const handleDeleteProduct=async ()=>{
         try {
             await deleteProductData(productid);
