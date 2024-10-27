@@ -24,7 +24,7 @@ const AddProducts = () => {
         console.log("Ürün Ekleme işlemi başarısız");
         setLoading(false);
       }
-    } catch (error: any) {
+    } catch (error:any) {
       console.log("Hata:", error);
       setLoading(false);
     }

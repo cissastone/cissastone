@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Slider from "./_components/Slider";
 import Products from "./_components/Products";
 import Image from "next/image";
 

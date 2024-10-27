@@ -43,7 +43,7 @@ const ProductButtons = ({productid}:{productid:string}) => {
             await updateProductData(productid, productData); // Firebase güncelleme işlemi
             setMessage("Ürün Başarıyla Güncellendi");
             setOpenForm(false);
-        } catch (error) {
+        } catch (_) {
             setMessage("Güncelleme Başarısız");
         } finally {
             setLoading(false);
@@ -53,7 +53,7 @@ const ProductButtons = ({productid}:{productid:string}) => {
         try {
             await deleteProductData(productid);
             setMessage("Ürün Başarıyla Silindi")
-        } catch (error) {
+        } catch (_) {
             setMessage("Güncelleme Başarısız");
             
         }finally {
