@@ -40,15 +40,8 @@ const ProductButtons = ({productid}:{productid:string}) => {
         setLoading(true); // Yükleniyor durumunu ayarla
     
         try {
-            // Firebase güncelleme işlemi
             const updatedData = await updateProductData(productid, productData);
-            // Tip belirlemesi yaparak Firestore'dan dönen veriyi uygun bir yapıya çevir
-        const typedUpdatedData = updatedData as { 
-            productName: string; 
-            productDescription: string; 
-            productAmount: string; 
-        };
-            setProductData(typedUpdatedData); // Güncellenen ürünü state'e ata
+            setProductData(updatedData);// Güncellenen ürünü state'e ata
     
             setMessage("Ürün Başarıyla Güncellendi"); // Başarılı güncelleme mesajı
             setOpenForm(false); // Formu kapat

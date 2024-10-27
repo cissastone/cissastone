@@ -1,6 +1,12 @@
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { initializeFirebaseClient } from "../FirebaseClient/config";
 
+
+interface ProductData {
+    productName: string;
+    productDescription: string;
+    productAmount: string;
+  }
 export async function updateProductData(id: string, productData: any) {
   const { db } = initializeFirebaseClient();
   const collectionRef = doc(db, "products", id);
@@ -14,7 +20,7 @@ export async function updateProductData(id: string, productData: any) {
 
     const updatedDoc = await getDoc(collectionRef);
     if (updatedDoc.exists()) {
-      return updatedDoc.data();
+      return updatedDoc.data() as ProductData;
     } else {
       throw new Error("Güncellenen veri bulunamadı.");
     }
