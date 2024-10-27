@@ -11,7 +11,7 @@ type Product = {
 type SearchInputProps = {
   products: Product[];
 };
-export const revalidate = 0; // 60 saniyede bir veriyi yeniden getir
+
 
 const SearchInput = ({ products }: SearchInputProps) => {
   const [search, setSearch] = useState("");
