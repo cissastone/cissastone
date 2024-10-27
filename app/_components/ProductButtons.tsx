@@ -3,9 +3,9 @@ import { getProductData } from "@/lib/actions/GetProductData";
 import { useState } from "react";
 import { updateProductData } from "@/lib/actions/UpdateProduct"; // Güncelleme fonksiyonu
 import { deleteProductData } from "@/lib/actions/deleteProduct";
+import { useRouter } from "next/navigation";
 
 
-export const revalidate="0";
 const ProductButtons = ({productid}:{productid:string}) => {
     const [openForm, setOpenForm] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -15,6 +15,7 @@ const ProductButtons = ({productid}:{productid:string}) => {
         productDescription: "",
         productAmount: "",
     });
+    const router=useRouter();
 
     // Ürün verisini çek ve state'e ata
     const handleFormState = async () => {
@@ -44,6 +45,7 @@ const ProductButtons = ({productid}:{productid:string}) => {
             await updateProductData(productid, productData);
             setMessage("Ürün Başarıyla Güncellendi"); // Başarılı güncelleme mesajı
             setOpenForm(false); // Formu kapat
+            router.refresh();
         } catch (error) {
             console.error(error); // Hata durumunda konsola hata yazdır
             setMessage("Güncelleme Başarısız"); // Başarısız güncelleme mesajı

@@ -5,25 +5,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      {/* <section className="flex flex-col items-center gap-2 justify-center mb-4">
-        <h1 className="sm:text-6xl text-4xl font-extrabold mt-2 text-black ">
-          Çissa Stone
-        </h1>
-        <p className="w-[350px] max-sm:text-xs sm:w-[500px] text-paragraph mt-2 text-sm max-sm:w-[250px]">
-          Yapay taşın değişimiyle ilgili derin bilgimiz ve deneyimimizle,
-          estetik ve fonksonelliği bir araya getiriyoruz.
-        </p>
-      </section>
-      <Slider />
-      <div className="w-full flex justify-center mt-2">
-        <Link
-          href={"#products"}
-          className="px-4 py-1 bg-black text-white rounded-full  hover:underline"
-        >
-          Tüm Ürünleri Gör
-        </Link>
-      </div> */}
-
       <section className="flex mt-10 max-sm:flex-col max-sm:gap-4">
         <div className="flex-1 flex gap-4 sm:justify-between flex-col relative z-10">
           <div>
