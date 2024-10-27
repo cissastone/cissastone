@@ -22,6 +22,7 @@ export async function updateProductData(id: string, productData: any) {
 
     const updatedDoc = await getDoc(collectionRef);
     revalidatePath("/adminDashboard")
+    revalidatePath("/")
     if (updatedDoc.exists()) {
       return updatedDoc.data() as ProductData;
     } else {
