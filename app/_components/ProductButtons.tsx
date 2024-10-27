@@ -3,6 +3,7 @@ import { getProductData } from "@/lib/actions/GetProductData";
 import { useState } from "react";
 import { updateProductData } from "@/lib/actions/UpdateProduct"; // Güncelleme fonksiyonu
 import { deleteProductData } from "@/lib/actions/deleteProduct";
+import { getAllProducts } from "@/lib/actions/getAllProducts";
 
 const ProductButtons = ({productid}:{productid:string}) => {
     const [openForm, setOpenForm] = useState(false);
@@ -42,6 +43,7 @@ const ProductButtons = ({productid}:{productid:string}) => {
         try {
             const updatedData = await updateProductData(productid, productData);
             setProductData(updatedData);// Güncellenen ürünü state'e ata
+            await getAllProducts();
     
             setMessage("Ürün Başarıyla Güncellendi"); // Başarılı güncelleme mesajı
             setOpenForm(false); // Formu kapat
