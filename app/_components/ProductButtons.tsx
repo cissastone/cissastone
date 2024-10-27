@@ -76,8 +76,8 @@ const ProductButtons = ({productid}:{productid:string}) => {
             </button>
 
             {openForm && (
-                <form onSubmit={handleSubmit} className="absolute flex flex-col gap-4 max-sm:w-[300px] sm:w-[500px] sm:h-[450px] bg-paragraph p-4 rounded-md">
-                    <span className="flex justify-end cursor-pointer" onClick={()=>setOpenForm(false)}>X</span>
+                <form onSubmit={handleSubmit} className="absolute z-10 bg-neutral-1000 flex flex-col gap-4 max-sm:w-[300px] sm:w-[500px] sm:h-[450px] bg-paragraph p-4 rounded-md">
+                    <span className="flex justify-end cursor-pointer text-white" onClick={()=>setOpenForm(false)}>X</span>
                     <h1 className="flex justify-center font-bold text-white text-2xl">
                         Ürün Güncelleme Paneli
                     </h1>

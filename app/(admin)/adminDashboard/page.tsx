@@ -6,9 +6,9 @@ export const revalidate = 0; // 60 saniyede bir veriyi yeniden getir
 const AdminDashboard =async () => {
     const products = await getAllProducts();
   return (
-    <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 w-full p-4 h-screen">
+    <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 max-sm:gap-0  w-full p-4 h-screen">
       {products.map((product,index)=>(
-        <div className="w-full  flex gap-2 flex-col items-center  bg-neutral-500 rounded-md p-2 h-fit" key={index}>
+        <div className="w-full  flex gap-2 flex-col items-center max-sm:gap-0 bg-neutral-500 rounded-md p-2 h-fit" key={index}>
             <div className="w-16 h-16 relative  ">
             <Image src={product.imageUrl} alt="productImage" fill className="object-cover rounded-full" />
             </div>
