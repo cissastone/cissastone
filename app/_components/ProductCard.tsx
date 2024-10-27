@@ -7,6 +7,8 @@ type ProductCardProps={
   productAmount:string;
   productImage:string;
 }
+export const revalidate = 0; // 60 saniyede bir veriyi yeniden getir
+
 const ProductCard = ({productName,productDescription,productImage,productAmount}:ProductCardProps) => {
      // State to manage the visibility of the enlarged image
   const [isOpen, setIsOpen] = useState(false);
