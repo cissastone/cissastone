@@ -22,10 +22,10 @@ export default function Home() {
           </p>
           </div>
           {/* Direction buttons */}
-          <div className="flex gap-4  max-lg:flex-col max-lg:w-fit">
+          <div className="flex gap-4 items-center  max-lg:flex-col max-lg:w-fit">
           <button className="bg-primary  text-neutral  px-4 py-2 text-xl rounded-full hover:bg-neutral-400 font-medium"><Link href={"#products"}>Tüm Ürünleri Gör</Link></button>
           <button className="border border-primary  text-primary max-sm:px-2   px-4 py-2 text-xl rounded-full hover:bg-neutral-400 font-medium"><Link href={"/contact"}>Bizimle İletişime Geç</Link></button>
-          <button className="border border-green-400  text-green-400 max-sm:px-2   px-4 py-2 text-xl rounded-full hover:bg-green-500 hover:text-white font-medium"><Link href="https://wa.me/905313442265" target="_blank" rel="noopener noreferrer">Whatsapp</Link></button>
+          <Link href="https://wa.me/905313442265" target="_blank" rel="noopener noreferrer"><Image src="/whatsapp.png" alt="whatsappicon" width={32} height={32} className="object-cover" /></Link>
           </div>
         </div>
         <div className="absolute w-[500px] h-[500px] max-sm:hidden bg-slate-50 left-0 rounded-full blur-[100px] opacity-10 z-0" />
