@@ -1,3 +1,4 @@
+'use server'
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { initializeFirebaseClient } from "../FirebaseClient/config";
 import { revalidatePath } from "next/cache";
