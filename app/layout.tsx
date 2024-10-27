@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-gradient-to-t from-neutral-1000 to-neutral-800 min-h-screen  w-full selection:text-primary selection:bg-neutral-600   ">
-        <div className="max-w-[1440px] mx-auto max-sm:px-4 relative  ">
+        <div className="max-w-[1440px] mx-auto max-sm:px-4 relative 2xl:max-w-[1536px] 2xl:px-4  ">
           <Navbar />
           <div className="relative top-[60px]">{children}</div>
         </div>
