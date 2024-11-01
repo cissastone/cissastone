@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex-1 flex gap-4 sm:justify-between flex-col relative z-10">
           <div>
 
-          <span className="text-neutral-300 text-xs inline-block sm:top-4 sm:-right-[450px] relative">
+          <span className="text-neutral-300 text-xs inline-block sm:top-4 sm:-right-[450px] relative max-lg:left-[100px]">
             3D Tasarım İşlemleri
           </span>
           <h1 className="sm:text-8xl text-7xl font-bold bg-gradient-to-b from-gradientTextStart sm:mb-8 max-sm:w-full   to-gradientTextEnd text-transparent bg-clip-text">
@@ -18,7 +18,7 @@ export default function Home() {
           </h1>
           <p className="text-neutral-300 leading-8 sm:text-lg  sm:max-w-[600px]">
             Yapay taşın değişimiyle ilgili derin bilgimiz ve deneyimimizle,
-            estetik ve fonksonelliği bir araya getiriyoruz
+            estetik ve fonksonelliği bir araya getiriyoruz.
           </p>
           </div>
           {/* Direction buttons */}
