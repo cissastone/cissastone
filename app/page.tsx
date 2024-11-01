@@ -18,7 +18,7 @@ export default function Home() {
           </h1>
           <p className="text-neutral-300 leading-8 sm:text-lg  sm:max-w-[600px]">
             Yapay taşın değişimiyle ilgili derin bilgimiz ve deneyimimizle,
-            estetik ve fonksonelliği bir araya getiriyoruz.
+            estetik ve fonksonelliği bir araya getiriyoruz
           </p>
           </div>
           {/* Direction buttons */}
