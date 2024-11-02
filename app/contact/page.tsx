@@ -65,14 +65,14 @@ const ContactPage = () => {
         <Link
           target="blank"
           href={"https://www.instagram.com/cissastone39/"}
-          className="flex gap-2 items-center   w-fit  "
+          className="flex gap-2 items-center w-fit  cursor-pointer"
         >
           {/* İcon Telefon */}
           <Instagram size={16} className="text-neutral-200 hover:text-white" />
           {/* Numara */}
-          <span className="text-neutral-200  font-medium text-base max-sm:text-xs tracking-[1px]">
+          <p className="text-neutral-200  font-medium text-base max-sm:text-xs tracking-[1px]">
             Cissastone39
-          </span>
+          </p>
         </Link>
         <div className="flex gap-2 items-center w-fit">
           <MapPin  className="text-neutral-200 max-sm:text-xl max-sm:w-8 max-sm:h-8 w-4 h-4" />
@@ -83,7 +83,7 @@ const ContactPage = () => {
       </div>
     
     {/* İmageBg */}
-    <div className="flex absolute  mix-blend-multiply opacity-40 h-full w-full">
+    <div className="flex absolute -z-[10]  mix-blend-multiply opacity-40 h-full w-full">
     <Image src={"/street.jpg"} alt="bg" fill className="object-cover  z-0" />
     </div>
     </div>
