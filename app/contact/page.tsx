@@ -34,7 +34,7 @@ const ContactPage = () => {
         {/* Telefon1 */}
         <div className="flex gap-2 items-center">
           {/* İcon Telefon */}
-          <Phone size={16} className="text-neutral-200" />
+          <Phone size={16} className="text-green-400" />
           {/* Numara */}
           <span className="text-neutral-200 font-medium text-base max-sm:text-xs tracking-[1px]">
             05313442265
@@ -46,7 +46,7 @@ const ContactPage = () => {
         {/* Telefon2 */}
         <div className="flex gap-2 items-center">
           {/* İcon Telefon */}
-          <Phone size={16} className="text-neutral-200" />
+          <Phone size={16} className="text-green-400" />
           {/* Numara */}
           <span className="text-neutral-200  font-medium text-base max-sm:text-xs tracking-[1px]">
             05443861293
@@ -56,36 +56,46 @@ const ContactPage = () => {
           </span>
         </div>
         <div className="flex gap-2 items-center">
-          <Mail size={16} className="text-neutral-200" />
+          <Mail size={16} className="text-red-400" />
           <span className="text-neutral-200 font-medium text-base max-sm:text-xs tracking-[1px]">
             cissastone39@gmail.com
           </span>
         </div>
 
         <Link
-          target="blank"
+          target="_blank"
           href={"https://www.instagram.com/cissastone39/"}
-          className="flex gap-2 items-center w-fit  cursor-pointer"
+          className="flex gap-2 items-center w-fit cursor-pointer"
         >
-          {/* İcon Telefon */}
-          <Instagram size={16} className="text-neutral-200 hover:text-white" />
-          {/* Numara */}
-          <p className="text-neutral-200  font-medium text-base max-sm:text-xs tracking-[1px]">
+          <div className="bg-gradient-to-r from-[rgb(81,91,212)] via-[rgb(129,52,175)] to-[rgb(221,42,123)]  rounded-full">
+            <Instagram size={16} className="text-white" />
+          </div>
+          <p className="text-neutral-200 font-medium text-base max-sm:text-xs tracking-[1px]">
             Cissastone39
           </p>
         </Link>
-        <div className="flex gap-2 items-center w-fit">
-          <MapPin  className="text-neutral-200 max-sm:text-xl max-sm:w-8 max-sm:h-8 w-4 h-4" />
+
+        <Link
+          href={"https://maps.app.goo.gl/UdwQK5wMcWiMmXFB9"}
+          target="_blank"
+          className="flex gap-2 items-center w-fit"
+        >
+          <MapPin className="text-blue-400 from max-sm:text-xl max-sm:w-8 max-sm:h-8 w-4 h-4" />
           <span className="text-neutral-200 font-medium text-base max-sm:text-xs tracking-[1px]">
             Kırklareli merkez/ Akalar mahallesi/ namazgah Caddesi/ bina no:64/1B
           </span>
-        </div>
+        </Link>
       </div>
-    
-    {/* İmageBg */}
-    <div className="flex absolute -z-[10]  mix-blend-multiply opacity-40 h-full w-full">
-    <Image src={"/street.jpg"} alt="bg" fill className="object-cover  z-0" />
-    </div>
+
+      {/* İmageBg */}
+      <div className="flex absolute -z-[10]  mix-blend-multiply opacity-40 h-full w-full">
+        <Image
+          src={"/street.jpg"}
+          alt="bg"
+          fill
+          className="object-cover  z-0"
+        />
+      </div>
     </div>
   );
 };
