@@ -34,19 +34,19 @@ export default function Home() {
         <div className="absolute w-[500px] h-[500px]  bg-neutral-200 right-0 rounded-full blur-[100px] opacity-30" />
 
           <div className=" h-[150px] max-sm:h-[200px] col-span-5 row-span-2 relative overflow-hidden  ">
-            <Image src="/im1.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out " />
+            <Image src="/im4.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out " />
           </div>
           <div className="sm:col-span-3 col-span-5 sm:row-span-1 max-sm:h-[200px]   relative">
-            <Image src="/im4.jpg" fill alt="image"  className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out"/>
+            <Image src="/im5.jpg" fill alt="image"  className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out"/>
           </div>
           <div className="sm:col-span-2 col-span-5 h-[200px]  row-span-1 relative">
-            <Image src="/im5.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+            <Image src="/im6.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
           </div>
           <div className="sm:col-span-2 col-span-5 h-[100px] max-sm:h-[200px] relative">
-            <Image src="/im2.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+            <Image src="/im7.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
           </div>
           <div className="sm:col-span-3 col-span-5 h-[100px] max-sm:h-[200px] relative">
-            <Image src="/im3.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
+            <Image src="/im8.jpg" fill alt="image" className="object-cover rounded-md hover:brightness-125 transition-all ease-in-out" />
           </div>
         </div>
       </section>
