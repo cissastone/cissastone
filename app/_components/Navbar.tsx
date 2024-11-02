@@ -2,6 +2,7 @@
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +30,10 @@ const Navbar = () => {
       <nav className="flex  max-w-[1440px] mx-auto  w-full sm:justify-center justify-between gap-8 items-center  min-h-[60px]">
       <Link
           href="/"
-          className="font-bold text-2xl max-sm:text-base text-white"
+          className="font-bold text-2xl max-sm:text-base text-white flex gap-2"
         >
+          <Image src="/logo.png" alt="logo" width={32} height={32} />
+
           Çissa Stone
         </Link>
         <div className="w-[1px] h-[16px] bg-neutral max-sm:hidden "></div>
