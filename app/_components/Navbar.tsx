@@ -38,6 +38,12 @@ const Navbar = () => {
         </Link>
         <div className="w-[1px] h-[16px] bg-neutral max-sm:hidden "></div>
       <Link
+          href="/"
+          className="font-medium hover:underline max-sm:hidden text-neutral-200 text-[16px] underline-offset-4 max-md:text-xs"
+        >
+          Anasayfa
+        </Link>
+      <Link
           href="#products"
           className="font-medium hover:underline max-sm:hidden text-neutral-200 text-[16px] underline-offset-4 max-md:text-xs"
         >
