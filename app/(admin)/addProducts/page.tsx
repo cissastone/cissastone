@@ -81,9 +81,6 @@ const AddProducts = () => {
         >
           {loading ? "Yükleniyor..." : "Ürün Ekle"}
         </button>
-        <button className=" h-fit w-fit  px-4 py-2 bg-neutral-300 text-white mt-2 rounded-md hover:bg-neutral-400  transition-all ease-in-out ">
-          <Link href={"/adminDashboard"}>Tüm Ürünleri Gör</Link>
-        </button>
       </form>
     </div>
   );
